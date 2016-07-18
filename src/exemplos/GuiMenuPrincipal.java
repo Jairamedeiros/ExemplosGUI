@@ -35,6 +35,11 @@ public class GuiMenuPrincipal extends JFrame{
        miSair = new JMenuItem("Sair");
        miBotao = new JMenuItem("Botao");
        
+       
+       mnArquivo.setMnemonic('A');
+       mnExemplos.setMnemonic('E');
+       
+       
        mnArquivo.add(miSair);
        mnExemplos.add(miBotao);
        mnBarra.add(mnArquivo);
@@ -60,7 +65,10 @@ public class GuiMenuPrincipal extends JFrame{
            @Override
            public void actionPerformed(ActionEvent e) {
                
-               JOptionPane.showMessageDialog(null, "BOTÃO");
+               GuiBotao botao = new GuiBotao();
+               contentPane.removeAll();
+               contentPane.add(botao);
+               contentPane.validate();
                
                
                
