@@ -15,7 +15,9 @@ public class GuiMenuPrincipal extends JFrame{
    private Container contentPane;
    private JMenuBar mnBarra;
    private JMenu mnArquivo, mnExemplos;
-   private JMenuItem miSair, miBotao;
+   private JMenuItem miSair, miBotao,miCaixaOpcao;
+   private JMenuItem miRadio;
+   private JMenuItem miLista;
    
    public GuiMenuPrincipal(){
       inicializarComponentes();
@@ -34,6 +36,9 @@ public class GuiMenuPrincipal extends JFrame{
        mnExemplos = new JMenu("Exemplos");
        miSair = new JMenuItem("Sair");
        miBotao = new JMenuItem("Botao");
+       miCaixaOpcao = new JMenuItem("Caixa de Opção");
+       miRadio = new JMenuItem("Botão de Rádio");
+       miLista = new JMenuItem("Lista");
        
        
        mnArquivo.setMnemonic('A');
@@ -42,6 +47,9 @@ public class GuiMenuPrincipal extends JFrame{
        
        mnArquivo.add(miSair);
        mnExemplos.add(miBotao);
+       mnExemplos.add(miCaixaOpcao);
+       mnExemplos.add(miRadio);
+       mnExemplos.add(miLista);
        mnBarra.add(mnArquivo);
        mnBarra.add(mnExemplos);
        setJMenuBar(mnBarra);
@@ -75,6 +83,49 @@ public class GuiMenuPrincipal extends JFrame{
            }
        });
        
+       
+       miRadio.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               GuiRadio radio = new GuiRadio();
+               contentPane.removeAll();
+               contentPane.add(radio);
+               contentPane.validate();
+               
+               
+               
+               
+           }
+       });
+       
+               
+       miLista.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               GuiLista lista = new GuiLista();
+               contentPane.removeAll();
+               contentPane.add(lista);
+               contentPane.validate();
+                                          
+               
+           }
+       });
+       
+           
+          
+       miCaixaOpcao.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+              GuiCaixaOpcao opcao = new GuiCaixaOpcao();
+              contentPane.removeAll();
+              contentPane.add(opcao); 
+              contentPane.validate();
+               
+           }
+       });
        
        
        
