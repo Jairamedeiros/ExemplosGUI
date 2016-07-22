@@ -44,7 +44,7 @@ public class GuiMenuPrincipal extends JFrame{
        miListaFotos = new JMenuItem("Fotos");
        miAreaDeTexto = new JMenuItem("Area de Texto");
        miDialogoMensagem = new JMenuItem("Mensagem Dialogo");
-       miDialogoConfirmacao = new JMenuItem("Mensagem Confirmada");
+       miDialogoConfirmacao = new JMenuItem("Dialogo Confirmação");
        
        
        mnArquivo.setMnemonic('A');
