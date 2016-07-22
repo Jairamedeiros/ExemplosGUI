@@ -65,7 +65,7 @@ public class GUILogin extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String login = tfLogin.getText();
                 String senha = String.valueOf(pfSenha.getPassword());
-                if (login.equals("jaira") && senha.equals("123")){
+                if (login.equals("") && senha.equals("")){
                     frame.setVisible(false);
                     GuiMenuPrincipal.run();
                     

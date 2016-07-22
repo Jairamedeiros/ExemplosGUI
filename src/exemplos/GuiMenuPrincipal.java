@@ -16,8 +16,10 @@ public class GuiMenuPrincipal extends JFrame{
    private JMenuBar mnBarra;
    private JMenu mnArquivo, mnExemplos;
    private JMenuItem miSair, miBotao,miCaixaOpcao;
-   private JMenuItem miRadio;
-   private JMenuItem miLista;
+   private JMenuItem miRadio,miLista,miListaFotos,miAreaDeTexto;;
+   private JMenuItem miDialogoMensagem,miDialogoConfirmacao;
+ 
+   
    
    public GuiMenuPrincipal(){
       inicializarComponentes();
@@ -39,6 +41,10 @@ public class GuiMenuPrincipal extends JFrame{
        miCaixaOpcao = new JMenuItem("Caixa de Opção");
        miRadio = new JMenuItem("Botão de Rádio");
        miLista = new JMenuItem("Lista");
+       miListaFotos = new JMenuItem("Fotos");
+       miAreaDeTexto = new JMenuItem("Area de Texto");
+       miDialogoMensagem = new JMenuItem("Mensagem Dialogo");
+       miDialogoConfirmacao = new JMenuItem("Mensagem Confirmada");
        
        
        mnArquivo.setMnemonic('A');
@@ -50,6 +56,10 @@ public class GuiMenuPrincipal extends JFrame{
        mnExemplos.add(miCaixaOpcao);
        mnExemplos.add(miRadio);
        mnExemplos.add(miLista);
+       mnExemplos.add(miListaFotos);
+       mnExemplos.add(miAreaDeTexto);
+       mnExemplos.add(miDialogoMensagem);
+       mnExemplos.add(miDialogoConfirmacao);
        mnBarra.add(mnArquivo);
        mnBarra.add(mnExemplos);
        setJMenuBar(mnBarra);
@@ -113,7 +123,65 @@ public class GuiMenuPrincipal extends JFrame{
            }
        });
        
-           
+       miListaFotos.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               GuiListaFotos fotos = new GuiListaFotos();
+               contentPane.removeAll();
+               contentPane.add(fotos);
+               contentPane.validate();
+             
+           }
+       });
+       
+       
+       miAreaDeTexto.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               GuiAreaDeTexto areaDeTexto = new GuiAreaDeTexto();
+                    contentPane.removeAll();
+                    contentPane.add(areaDeTexto);
+                    contentPane.validate();
+               
+                             
+              
+           }
+       });
+       
+       
+       miDialogoMensagem.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+                GUIDialogoMensagem mensagem = new  GUIDialogoMensagem();
+                    contentPane.removeAll();
+                    contentPane.add(mensagem);
+                    contentPane.validate();
+
+               
+           }
+       });
+       
+       
+        miDialogoConfirmacao.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               GuiDialogoConfirmacao confirmacao = new GuiDialogoConfirmacao();
+                    contentPane.removeAll();
+                    contentPane.add(confirmacao);
+                    contentPane.validate();
+                            
+               
+               
+           }
+       });
+        
+        
+  
+                 
           
        miCaixaOpcao.addActionListener(new ActionListener() {
 
@@ -127,9 +195,8 @@ public class GuiMenuPrincipal extends JFrame{
            }
        });
        
-       
-       
-       
+                         
+             
    }
    
    
