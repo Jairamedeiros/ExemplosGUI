@@ -18,7 +18,9 @@ public class GuiMenuPrincipal extends JFrame{
    private JMenuItem miSair, miBotao,miCaixaOpcao;
    private JMenuItem miRadio,miLista,miListaFotos,miAreaDeTexto;;
    private JMenuItem miDialogoMensagem,miDialogoConfirmacao;
- 
+   private JMenuItem miDialogoOpcao;
+   private JMenuItem miGuiGrade;
+   
    
    
    public GuiMenuPrincipal(){
@@ -45,6 +47,8 @@ public class GuiMenuPrincipal extends JFrame{
        miAreaDeTexto = new JMenuItem("Area de Texto");
        miDialogoMensagem = new JMenuItem("Mensagem Dialogo");
        miDialogoConfirmacao = new JMenuItem("Dialogo Confirmação");
+       miDialogoOpcao = new JMenuItem("Dialogo opção");
+       miGuiGrade = new JMenuItem("Grade");
        
        
        mnArquivo.setMnemonic('A');
@@ -60,6 +64,8 @@ public class GuiMenuPrincipal extends JFrame{
        mnExemplos.add(miAreaDeTexto);
        mnExemplos.add(miDialogoMensagem);
        mnExemplos.add(miDialogoConfirmacao);
+       mnExemplos.add(miDialogoOpcao);
+       mnExemplos.add(miGuiGrade);
        mnBarra.add(mnArquivo);
        mnBarra.add(mnExemplos);
        setJMenuBar(mnBarra);
@@ -180,8 +186,40 @@ public class GuiMenuPrincipal extends JFrame{
        });
         
         
-  
-                 
+        miDialogoOpcao.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+                GuiDialogoOpcao sexo = new GuiDialogoOpcao();
+                    contentPane.removeAll();
+                    contentPane.add(sexo);
+                    contentPane.validate();
+            
+            
+           }
+       });
+        
+        
+        
+        miGuiGrade.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               GuiGrade grade = new GuiGrade();
+                    contentPane.removeAll();
+                    contentPane.add(grade);
+                    contentPane.validate();
+               
+               
+                           
+               
+               
+           }
+       });
+        
+        
+        
+                
           
        miCaixaOpcao.addActionListener(new ActionListener() {
 

@@ -39,9 +39,9 @@ public class GuiListaFotos extends JPanel{
         imagem = new ImageIcon();
         lbImagem = new JLabel(imagem);
         
-        sp.setBounds(50, 40, 70, 150);
-        lbImagem.setBounds(150,30,180,180);
-        
+        sp.setBounds(10, 30, 100, 150);
+        lbImagem.setBounds(150,50,500,500);
+        //150,30,180,180
         
         add(sp);
         add(lbImagem);
