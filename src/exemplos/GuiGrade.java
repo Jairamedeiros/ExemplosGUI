@@ -190,7 +190,7 @@ public class GuiGrade extends JPanel{
             }
 
             private void CalcularTotal() {
-                float total = 0F;
+                float total = 0f;
                 for (int linha = 0; linha < Table.getRowCount(); linha++){
                     String valor = "" + Table.getValueAt(linha, 3);
                     valor = valor.replace(",", ",");
