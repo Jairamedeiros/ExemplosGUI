@@ -1,7 +1,6 @@
 
 package exemplos;
 
-
 import java.awt.*;
 import java.awt.event.*;
 import java.text.DecimalFormat;
@@ -64,7 +63,7 @@ public class GuiGrade extends JPanel{
         tfNumero.setBounds(130,10,50,25);
         tfTotal.setBounds(375,360,100,25);
         btAdicionar.setBounds(15,100,100,22);
-        btRemover.setBounds(125,10,10,22);
+        btRemover.setBounds(125,100,100,22);
         
         pnPrincipal = new JPanel();
         pnPrincipal.setLayout(null);
@@ -207,7 +206,3 @@ public class GuiGrade extends JPanel{
 
 
 
-
-    
-                
-             
