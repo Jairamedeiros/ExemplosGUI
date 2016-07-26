@@ -209,17 +209,12 @@ public class GuiMenuPrincipal extends JFrame{
                     contentPane.removeAll();
                     contentPane.add(grade);
                     contentPane.validate();
-               
-               
-                           
-               
-               
+                                                
+                            
            }
        });
-        
-        
-        
-                
+                      
+              
           
        miCaixaOpcao.addActionListener(new ActionListener() {
 
