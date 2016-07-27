@@ -49,7 +49,7 @@ public class GuiMenuPrincipal extends JFrame{
        miDialogoConfirmacao = new JMenuItem("Dialogo Confirmação");
        miDialogoOpcao = new JMenuItem("Dialogo opção");
        miGuiGrade = new JMenuItem("Grade");
-       
+     
        
        mnArquivo.setMnemonic('A');
        mnExemplos.setMnemonic('E');
